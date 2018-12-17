@@ -1,15 +1,14 @@
 package ru.otus.main.quizservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import ru.otus.main.display.Display;
 import ru.otus.main.namerequester.NameRequester;
 import ru.otus.main.questioner.Questioner;
 import ru.otus.main.quiz.Quiz;
 import ru.otus.main.quiz.Quizer;
 
-@Component("quizservice")
+@Service
 public class QuizServiceImpl implements QuizService{
     private NameRequester nameRequester;
     private Quizer quizer;

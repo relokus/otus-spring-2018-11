@@ -10,7 +10,7 @@ public class Main {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(Main.class);
 
-        QuizService quizService = (QuizService) context.getBean("quizservice");
+        QuizService quizService = context.getBean(QuizService.class);
         quizService.runQuiz();
     }
 }

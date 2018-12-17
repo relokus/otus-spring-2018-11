@@ -1,13 +1,13 @@
 package ru.otus.main.questioner;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import ru.otus.main.quiz.Quiz;
 
 import java.io.InputStream;
 import java.util.List;
 import java.util.Scanner;
 
-@Component
+@Service
 public class QuestionerImpl implements Questioner {
     public boolean[] ask(InputStream in, Quiz quiz) {
         System.out.println("QUIZ:");

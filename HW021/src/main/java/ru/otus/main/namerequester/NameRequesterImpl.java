@@ -2,14 +2,14 @@ package ru.otus.main.namerequester;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import ru.otus.main.localisationservice.LocalisationService;
 
 import java.io.InputStream;
 import java.util.Locale;
 import java.util.Scanner;
 
-@Component
+@Service
 public class NameRequesterImpl implements NameRequester {
     private LocalisationService localisationService;
 

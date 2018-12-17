@@ -2,14 +2,14 @@ package ru.otus.main.display;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import ru.otus.main.localisationservice.LocalisationService;
 import ru.otus.main.quiz.Quiz;
 
 import java.util.List;
 import java.util.Locale;
 
-@Component
+@Service
 public class DisplayImpl implements Display{
     private LocalisationService localisationService;
 

@@ -16,7 +16,7 @@ public class NameRequesterTest {
 
     @Before
     public void setUp() throws IOException {
-        String filePropsName = "props.properties";
+        String filePropsName = "testprops.properties";
         InputStream in = this.getClass().getClassLoader().getResourceAsStream(filePropsName);
         Properties property = new Properties();
         property.load(in);
