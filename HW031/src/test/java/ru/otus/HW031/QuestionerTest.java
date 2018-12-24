@@ -27,7 +27,7 @@ public class QuestionerTest {
         quizList.add(new String[]{"3", "Which city became capital of West-Germany in 1949?", "Bonn"});
         quizList.add(new String[]{"4", "On which island was Napoleon born?", "Corsica"});
         quizList.add(new String[]{"5", "Which French king was called the Sun King?", "Louis XIV"});
-        Quiz quiz = new Quiz(quizList);
+        Quiz quiz = new Quiz("Test testov", quizList);
 
         ByteArrayInputStream in = new ByteArrayInputStream(
                 ("George Washington\n" +
@@ -36,7 +36,7 @@ public class QuestionerTest {
                         "Corsica___\n" +
                         "Louis XIV___\n").getBytes());
         boolean[] expectedResult = {true, true, true, false, false};
-        boolean actualResult[] = questioner.ask(in, quiz);
-        Assert.assertArrayEquals(actualResult, expectedResult);
+        questioner.ask(in, quiz);
+        Assert.assertArrayEquals(quiz.getResult(), expectedResult);
     }
 }

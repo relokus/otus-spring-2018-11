@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 @Service
 public class QuestionerImpl implements Questioner {
-    public boolean[] ask(InputStream in, Quiz quiz) {
+    public void ask(InputStream in, Quiz quiz) {
         System.out.println("QUIZ:");
         Scanner scan = new Scanner(in);
         List<String[]> quizList = quiz.getQuiz();
@@ -22,6 +22,6 @@ public class QuestionerImpl implements Questioner {
             String ans = scan.nextLine();
             result[i] = ans.equals(quizList.get(i)[2]);
         }
-        return result;
+        quiz.setResult(result);
     }
 }

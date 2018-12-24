@@ -11,18 +11,18 @@ import java.util.List;
 import java.util.Locale;
 
 @Service
-public class QuizerCSV implements Quizer {
+public class QuestionsLoaderFromCSV implements QuestionsLoader {
     private final int nQuestions;
     private LocalisationService localisationService;
 
     @Autowired
-    public QuizerCSV(LocalisationService localisationService,
-                     QuizerProperties properties) {
+    public QuestionsLoaderFromCSV(LocalisationService localisationService,
+                                  QuizerProperties properties) {
         this.localisationService = localisationService;
         this.nQuestions = properties.getNquestions();
     }
 
-    public Quiz makeQuiz() {
+    public List<String[]> makeQuiz() {
         MessageSource messageSource = localisationService.getMessageSource();
         Locale locale = localisationService.getLocale();
 
@@ -31,6 +31,6 @@ public class QuizerCSV implements Quizer {
             allRows.add(messageSource.getMessage("question." + (i + 1),
                     new String[]{}, locale).split(","));
         }
-        return new Quiz(allRows);
+        return allRows;
     }
 }
