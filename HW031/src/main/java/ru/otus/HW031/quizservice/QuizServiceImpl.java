@@ -34,6 +34,6 @@ public class QuizServiceImpl implements QuizService{
 
         questioner.ask(System.in, quiz);
 
-        display.displayResults(quiz);
+        display.displayResults(currentUser, quiz.getQuiz(), quiz.getResult());
     }
 }

@@ -1,7 +1,8 @@
 package ru.otus.HW031.display;
 
-import ru.otus.HW031.quiz.Quiz;
+import java.util.List;
 
 public interface Display {
-    void displayResults(Quiz quiz);
+    void displayResults(String userName, List<String[]> quizList,
+                        boolean result[]);
 }
