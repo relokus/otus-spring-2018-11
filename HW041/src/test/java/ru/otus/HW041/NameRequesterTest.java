@@ -7,10 +7,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import ru.otus.HW041.localisationservice.LocalisationService;
-import ru.otus.HW041.localisationservice.LocalisationServiceImpl;
-import ru.otus.HW041.namerequester.NameRequester;
-import ru.otus.HW041.namerequester.NameRequesterImpl;
+import ru.otus.HW041.service.LocalisationService;
+import ru.otus.HW041.service.impl.LocalisationServiceImpl;
+import ru.otus.HW041.service.NameRequester;
+import ru.otus.HW041.service.impl.NameRequesterImpl;
 import ru.otus.HW041.properties.QuizerProperties;
 
 import java.io.ByteArrayInputStream;

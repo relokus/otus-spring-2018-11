@@ -1,13 +1,14 @@
-package ru.otus.HW041.display;
+package ru.otus.HW041.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.otus.HW041.localisationservice.LocalisationService;
+import ru.otus.HW041.service.LocalisationService;
+import ru.otus.HW041.service.Display;
 
 import java.util.List;
 
 @Service
-public class DisplayImpl implements Display{
+public class DisplayImpl implements Display {
     private LocalisationService localisationService;
 
     @Autowired

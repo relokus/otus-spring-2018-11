@@ -1,7 +1,8 @@
-package ru.otus.HW041.questioner;
+package ru.otus.HW041.service.impl;
 
 import org.springframework.stereotype.Service;
-import ru.otus.HW041.quiz.Quiz;
+import ru.otus.HW041.data.Quiz;
+import ru.otus.HW041.service.Questioner;
 
 import java.io.InputStream;
 import java.util.List;

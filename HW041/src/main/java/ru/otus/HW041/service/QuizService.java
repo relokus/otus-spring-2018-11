@@ -1,4 +1,4 @@
-package ru.otus.HW041.quizservice;
+package ru.otus.HW041.service;
 
 public interface QuizService {
     void runQuiz();

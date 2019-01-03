@@ -1,8 +1,8 @@
-package ru.otus.HW041.localisationservice;
+package ru.otus.HW041.service.impl;
 
-import org.springframework.context.MessageSource;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.stereotype.Service;
+import ru.otus.HW041.service.LocalisationService;
 
 import java.util.Locale;
 

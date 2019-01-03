@@ -1,6 +1,6 @@
-package ru.otus.HW041.questioner;
+package ru.otus.HW041.service;
 
-import ru.otus.HW041.quiz.Quiz;
+import ru.otus.HW041.data.Quiz;
 
 import java.io.InputStream;
 

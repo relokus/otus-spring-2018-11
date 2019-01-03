@@ -1,15 +1,16 @@
-package ru.otus.HW041.quizservice;
+package ru.otus.HW041.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.otus.HW041.display.Display;
-import ru.otus.HW041.namerequester.NameRequester;
-import ru.otus.HW041.questioner.Questioner;
-import ru.otus.HW041.quiz.QuestionsLoader;
-import ru.otus.HW041.quiz.Quiz;
+import ru.otus.HW041.service.Display;
+import ru.otus.HW041.service.NameRequester;
+import ru.otus.HW041.service.Questioner;
+import ru.otus.HW041.service.QuestionsLoader;
+import ru.otus.HW041.data.Quiz;
+import ru.otus.HW041.service.QuizService;
 
 @Service
-public class QuizServiceImpl implements QuizService{
+public class QuizServiceImpl implements QuizService {
     private NameRequester nameRequester;
     private QuestionsLoader questionsLoader;
     private Questioner questioner;

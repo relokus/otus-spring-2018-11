@@ -1,4 +1,4 @@
-package ru.otus.HW041.quiz;
+package ru.otus.HW041.service;
 
 import java.util.List;
 

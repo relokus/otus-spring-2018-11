@@ -1,4 +1,4 @@
-package ru.otus.HW041.display;
+package ru.otus.HW041.service;
 
 import java.util.List;
 

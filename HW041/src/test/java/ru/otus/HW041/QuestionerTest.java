@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import ru.otus.HW041.questioner.Questioner;
-import ru.otus.HW041.quiz.Quiz;
+import ru.otus.HW041.service.Questioner;
+import ru.otus.HW041.data.Quiz;
 
 import java.io.ByteArrayInputStream;
 import java.util.ArrayList;

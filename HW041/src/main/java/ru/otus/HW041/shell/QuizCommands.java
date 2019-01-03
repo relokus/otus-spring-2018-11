@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
-import ru.otus.HW041.localisationservice.LocalisationService;
-import ru.otus.HW041.quizservice.QuizService;
+import ru.otus.HW041.service.LocalisationService;
+import ru.otus.HW041.service.QuizService;
 
 @ShellComponent
 public class QuizCommands {
