@@ -1,14 +1,12 @@
 package ru.otus.HW041.quiz;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 import ru.otus.HW041.localisationservice.LocalisationService;
 import ru.otus.HW041.properties.QuizerProperties;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 @Service
 public class QuestionsLoaderFromCSV implements QuestionsLoader {
@@ -23,13 +21,10 @@ public class QuestionsLoaderFromCSV implements QuestionsLoader {
     }
 
     public List<String[]> makeQuiz() {
-        MessageSource messageSource = localisationService.getMessageSource();
-        Locale locale = localisationService.getLocale();
-
         List<String[]> allRows = new ArrayList<>();
         for(int i = 0; i < nQuestions; i++) {
-            allRows.add(messageSource.getMessage("question." + (i + 1),
-                    new String[]{}, locale).split(","));
+            allRows.add(localisationService.getLocalized(
+                    "question." + (i + 1), null).split(","));
         }
         return allRows;
     }

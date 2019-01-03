@@ -1,12 +1,10 @@
 package ru.otus.HW041.namerequester;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 import ru.otus.HW041.localisationservice.LocalisationService;
 
 import java.io.InputStream;
-import java.util.Locale;
 import java.util.Scanner;
 
 @Service
@@ -19,23 +17,19 @@ public class NameRequesterImpl implements NameRequester {
     }
 
     public String askName(InputStream in) {
-        MessageSource messageSource = localisationService.getMessageSource();
-        Locale locale = localisationService.getLocale();
-
-        System.out.println(messageSource.getMessage("hello.user",
-                new String[]{}, locale));
+        System.out.println(
+                localisationService.getLocalized("hello.user", null));
 
         Scanner scan = new Scanner(in);
         String name = scan.nextLine();
 
         while(name.length() < 4 || name.split(" ").length < 2) {
-            System.out.println(messageSource.getMessage("try.again",
-                    new String[]{}, locale));
+            System.out.println(
+                localisationService.getLocalized("try.again", null));
             name = scan.nextLine();
         }
-
-        System.out.println(messageSource.getMessage("thanks",
-                new String[]{name}, locale));
+        System.out.println(
+            localisationService.getLocalized("thanks", new String[]{name}));
         return name;
     }
 }

@@ -19,13 +19,9 @@ public class LocalisationServiceImpl implements LocalisationService {
     }
 
     @Override
-    public Locale getLocale() {
-        return locale;
-    }
-
-    @Override
-    public MessageSource getMessageSource() {
-        return messageSource;
+    public String getLocalized(String msg, String[] params) {
+        return messageSource.getMessage(msg,
+                params, locale);
     }
 
     @Override

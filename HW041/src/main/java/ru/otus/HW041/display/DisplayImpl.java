@@ -1,12 +1,10 @@
 package ru.otus.HW041.display;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 import ru.otus.HW041.localisationservice.LocalisationService;
 
 import java.util.List;
-import java.util.Locale;
 
 @Service
 public class DisplayImpl implements Display{
@@ -19,11 +17,8 @@ public class DisplayImpl implements Display{
 
     public void displayResults(String userName, List<String[]> quizList,
                                boolean result[]) {
-        MessageSource messageSource = localisationService.getMessageSource();
-        Locale locale = localisationService.getLocale();
-
-        System.out.println(messageSource.getMessage("results",
-                new String[]{userName}, locale));
+        System.out.println(
+            localisationService.getLocalized("results", new String[]{userName}));
         
         for(int i = 0; i < quizList.size(); i++) {
             System.out.println(quizList.get(i)[0] + " : " +
